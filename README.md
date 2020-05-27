@@ -1,3 +1,3 @@
-# chrome-extension-sample
+# No Zoom Amazon
 
-Simple Chrome extension sample
+Simple Chrome extension for getting around amazon blocking image downloading.
