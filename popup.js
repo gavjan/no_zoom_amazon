@@ -1,9 +1,14 @@
-function handleCanvas(canvas) { 
-  var myobj = document.getElementById("magnifierLens");
-  if(myobj){
-    myobj.remove();
+var observer = new MutationObserver(function (mutations, me) {
+  var canvas = document.getElementById('magnifierLens');
+  if (canvas) {
+    canvas.remove();
+//    me.disconnect(); // stop observing
+    return;
   }
-  
-}
+});
 
-window.setInterval(handleCanvas, 1000);
+// start observing
+observer.observe(document, {
+  childList: true,
+  subtree: true
+});
